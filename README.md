@@ -1,11 +1,11 @@
 ## Install
-1. conda install pytorch=1.7.0 cudatoolkit=10.1 torchvision -c pytorch
+1. `conda install pytorch=1.7.0 cudatoolkit=10.1 torchvision -c pytorch`
 
-2. pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.7.0/index.html
+2. `pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.7.0/index.html`
 
-3. pip install -r requirements/build.txt
+3. `pip install -r requirements/build.txt`
 
-4. pip install -v -e .
+4. `pip install -v -e .`
 
 ## notebook
 ### train
