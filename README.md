@@ -3,7 +3,7 @@
 
 2. `pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.7.0/index.html`
 
-3. `pip install -r requirements/build.txt`
+3. `pip install -r requirements.txt`
 
 4. `pip install -v -e .`
 
@@ -20,3 +20,5 @@
 `python tools/test.py configs/trash/faster_rcnn/faster_rcnn_r50_fpn_1x_trash.py work_dirs/faster_rcnn_r50_fpn_1x_trash/epoch_12.pth --out work_dirs/faster_rcnn_r50_fpn_1x_trash/epoch_12.pkl`
 ### make submission
 `python pkl_to_submission.py`
+### submission file
+`mmdetection_trash > work_dirs > faster_rcnn_r50_fpn_1x_coco > submission_{epoch}.csv`
