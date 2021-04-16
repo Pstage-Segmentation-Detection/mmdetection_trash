@@ -1,15 +1,19 @@
 import os
 import pandas as pd
 from pycocotools.coco import COCO
+import argparse
 
-work_dirs = './work_dirs/faster_rcnn_r50_fpn_1x_trash'
+parser = argparse.ArgumentParser(description='')
+parser.add_argument('--pkl', required=True, help='output file')
+parser.add_argument('--csv', required=True, help='submission file')
 
-epoch = 12
+args = parser.parse_args()
 
 prediction_strings = []
 file_names = []
-coco = COCO('../data/private_data.json')
-output = pd.read_pickle(os.path.join(work_dirs, f'epoch_{epoch}.pkl'))
+coco = COCO('../data/test.json')
+
+output = pd.read_pickle(args.pkl)
 imag_ids = coco.getImgIds()
 
 for i, out in enumerate(output):
@@ -26,5 +30,5 @@ for i, out in enumerate(output):
 submission = pd.DataFrame()
 submission['PredictionString'] = prediction_strings
 submission['image_id'] = file_names
-submission.to_csv(os.path.join(work_dirs, f'submission_{epoch}.csv'), index=None)
+submission.to_csv(args.csv, index=None)
 print(submission.head())
