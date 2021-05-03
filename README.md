@@ -19,6 +19,6 @@
 ### inference
 `python tools/test.py configs/trash/faster_rcnn/faster_rcnn_r50_fpn_1x_trash.py work_dirs/faster_rcnn_r50_fpn_1x_trash/epoch_12.pth --out work_dirs/faster_rcnn_r50_fpn_1x_trash/epoch_12.pkl`
 ### make submission
-`python pkl_to_submission.py`
+`python pkl_to_submission.py --pkl work_dirs/faster_rcnn_r50_fpn_1x_trash/epoch_12.pkl --csv submission.csv`
 ### submission file
-`mmdetection_trash > work_dirs > faster_rcnn_r50_fpn_1x_coco > submission_{epoch}.csv`
+`mmdetection_trash > submission.csv`
