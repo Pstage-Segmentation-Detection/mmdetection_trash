@@ -1,5 +1,5 @@
 dataset_type = 'CocoDataset'
-data_root = '../data/'
+data_root = '../../input/data/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -51,3 +51,4 @@ data = dict(
         img_prefix=data_root,
         pipeline=test_pipeline))
 
+checkpoint_config = dict(max_keep_ckpts=3, interval=1)
