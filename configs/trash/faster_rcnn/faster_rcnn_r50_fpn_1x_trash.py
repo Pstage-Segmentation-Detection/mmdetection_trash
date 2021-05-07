@@ -14,3 +14,5 @@ model = dict(
 )
 optimizer_config = dict(
     _delete_=True, grad_clip=dict(max_norm=35, norm_type=2))
+
+checkpoint_config = dict(max_keep_ckpts=3, interval=1)
