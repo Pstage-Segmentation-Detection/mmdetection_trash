@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 prediction_strings = []
 file_names = []
-coco = COCO('../data/test.json')
+coco = COCO('../../input/data/test.json')
 
 output = pd.read_pickle(args.pkl)
 imag_ids = coco.getImgIds()
