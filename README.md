@@ -3,9 +3,17 @@
 
 2. `pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6.0/index.html`
 
-3. `pip install -r requirements.txt`
+3. `git clone https://github.com/Pstage-Segmentation-Detection/mmdetection_trash.git`
 
-4. `pip install -v -e .`
+4. `cd mmdetection_trash`
+
+5. `pip install -r requirements.txt`
+
+6. `pip install -v -e .`
+
+7. `apt-get install libgl1-mesa-glx`
+
+8. `jupyter nbextension enable --py widgetsnbextension`
 
 ## notebook
 ### train
